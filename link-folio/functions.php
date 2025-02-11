@@ -126,12 +126,50 @@ function link_folio_register_block_pattern_categories()
 
 add_action('init', 'link_folio_register_block_pattern_categories');
 
+
+
+
+
+
 // Initialize information content
 require_once trailingslashit(get_template_directory()) . 'inc/vendor/autoload.php';
 
 use SuperbThemesThemeInformationContent\ThemeEntryPoint;
 
 ThemeEntryPoint::init([
-	'theme_url' => 'https://superbthemes.com/link-folio/',
-	'demo_url' => 'https://superbthemes.com/demo/link-folio/'
+    'type' => 'block', // block / classic
+    'theme_url' => 'https://superbthemes.com/link-folio/',
+    'demo_url' => 'https://superbthemes.com/demo/link-folio/',
+    'features' => array(
+    	array(
+    		'title' => __("Theme Designer", "link-folio"),
+    		'icon' => "lego-duotone.webp",
+    		'description' => __("Choose from over 300 designs for footers, headers, landing pages & all other theme parts.", "link-folio")
+    	),
+    	   	array(
+    		'title' => __("Editor Enhancements", "link-folio"),
+    		'icon' => "1-1.png",
+    		'description' => __("Enhanced editor experience, grid systems, improved block control and much more.", "link-folio")
+    	),
+    	array(
+    		'title' => __("Custom CSS", "link-folio"),
+    		'icon' => "2-1.png",
+    		'description' => __("Add custom CSS with syntax highlight, custom display settings, and minified output.", "link-folio")
+    	),
+    	array(
+    		'title' => __("Animations", "link-folio"),
+    		'icon' => "wave-triangle-duotone.webp",
+    		'description' => __("Animate any element on your website with one click. Choose from over 50+ animations.", "link-folio")
+    	),
+    	array(
+    		'title' => __("WooCommerce Integration", "link-folio"),
+    		'icon' => "shopping-cart-duotone.webp",
+    		'description' => __("Choose from over 100 unique WooCommerce designs for your e-commerce store.", "link-folio")
+    	),
+    	array(
+    		'title' => __("Responsive Controls", "link-folio"),
+    		'icon' => "arrows-out-line-horizontal-duotone.webp",
+    		'description' => __("Make any theme mobile-friendly with SuperbThemes responsive controls.", "link-folio")
+    	)
+    )
 ]);

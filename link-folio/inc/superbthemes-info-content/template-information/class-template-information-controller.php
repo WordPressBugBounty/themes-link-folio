@@ -16,7 +16,6 @@ class TemplateInformationController
         add_action('enqueue_block_editor_assets', array(__CLASS__, 'InformationContent'));
     }
 
-
     public static function InformationContent()
     {
         if (!self::$ThemeLink) {
@@ -27,21 +26,20 @@ class TemplateInformationController
         add_action('admin_footer', function () {
             $theme = wp_get_theme();
             $text = is_child_theme() ? sprintf(__("Unlock all features by upgrading to the premium edition of %s and its parent theme %s.", 'link-folio'), $theme, wp_get_theme($theme->Template)) : sprintf(__("Unlock all features by upgrading to the premium edition of %s.", 'link-folio'), $theme);
-            ob_start();
 ?>
-            <div class="superbthemes-js-information-wrapper">
-                <div class="superbthemes-js-information-item">
-                    <img width="25" height="25" src="<?php echo esc_url(get_template_directory_uri() . '/inc/superbthemes-info-content/icons/color-crown.svg'); ?>" />
-                    <div class="superbthemes-js-information-item-header"><?php esc_html_e("Upgrade to premium", 'link-folio'); ?></div>
-                    <div class="superbthemes-js-information-item-content">
-                        <p><?php echo esc_html($text); ?></p>
-                        <a href="<?php echo esc_url(self::$ThemeLink); ?>" target="_blank" class="button button-primary"><?php esc_html_e("View Premium Version", 'link-folio'); ?></a>
+            <script type="text/template" id="tmpl-superbthemes-js-information-wrapper">
+                <div class="superbthemes-js-information-wrapper">
+                    <div class="superbthemes-js-information-item">
+                        <img width="25" height="25" src="<?php echo esc_url(get_template_directory_uri() . '/inc/superbthemes-info-content/icons/color-crown.svg'); ?>" />
+                        <div class="superbthemes-js-information-item-header"><?php esc_html_e("Upgrade to premium", 'link-folio'); ?></div>
+                        <div class="superbthemes-js-information-item-content">
+                            <p><?php echo esc_html($text); ?></p>
+                            <a href="<?php echo esc_url(self::$ThemeLink."?su_source=blocks_patterns"); ?>" target="_blank" class="button button-primary"><?php esc_html_e("View Premium Version", 'link-folio'); ?></a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </script>
 <?php
-            $template = ob_get_clean();
-            echo '<script type="text/template" id="tmpl-superbthemes-js-information-wrapper">' . $template . '</script>';
         });
     }
 }
