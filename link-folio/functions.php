@@ -135,7 +135,7 @@ add_action('init', 'link_folio_register_block_pattern_categories');
 require_once trailingslashit(get_template_directory()) . 'inc/vendor/autoload.php';
 
 use SuperbThemesThemeInformationContent\ThemeEntryPoint;
-
+add_action("init", function () {
 ThemeEntryPoint::init([
     'type' => 'block', // block / classic
     'theme_url' => 'https://superbthemes.com/link-folio/',
@@ -173,3 +173,4 @@ ThemeEntryPoint::init([
     	)
     )
 ]);
+});
