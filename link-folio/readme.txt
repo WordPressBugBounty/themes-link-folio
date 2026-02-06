@@ -2,9 +2,9 @@
 
 Contributors: SuperbAddons
 Requires at least: 4.0  
-Tested up to: 6.5
-Stable tag: 1.2
-Version: 1.2
+Tested up to: 6.9
+Stable tag: 3.7
+Version: 3.7
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 Tags: blog, portfolio, entertainment, one-column, two-columns, block-patterns, block-styles, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-image-header, featured-images, footer-widgets, full-site-editing, full-width-template, sticky-post, style-variations, template-editing, threaded-comments, translation-ready, wide-blocks
@@ -17,7 +17,7 @@ Link Folio is the best free WordPress theme designed as an alternative to LinkTr
 
 
 ## Copyright
-Link Folio WordPress Theme, Copyright 2024 SuperbAddons
+Link Folio WordPress Theme, Copyright 2026 SuperbAddons
 Link Folio is distributed under the terms of the GNU GPL
 
 Link Folio bundles the following third-party resources:
